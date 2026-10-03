@@ -10,7 +10,7 @@
 
 The Go implementation is available in [RequestGuard_Go](https://github.com/NanahoshiLusuna/RequestGuard_Go).
 
-[🇰🇷 한국어](#한국어) · [🇺🇸 English](#english) · [🇯🇵 日本語](#日本語)
+[한국어](#한국어) · [English](#english) · [日本語](#日本語)
 
 ---
 
