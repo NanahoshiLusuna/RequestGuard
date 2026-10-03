@@ -1,5 +1,7 @@
 # RequestGuard
 
+**Lightweight Python HTTP reverse proxy for IP filtering, IP reputation, country-based policies, rate limiting, and temporary bans.**
+
 > **HTTP 요청 검사 및 차단 프록시 · HTTP Request Inspection & Blocking Proxy · HTTPリクエスト検査・ブロッキングプロキシ**
 
 **언어 / Language / 言語**

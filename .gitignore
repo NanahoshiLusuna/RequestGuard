@@ -1,0 +1,13 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Runtime data
+*.db
+*.sqlite
+*.sqlite3
+
+# Local configuration and secrets
+requestguard.env
+.env
