@@ -6,6 +6,10 @@
 
 **언어 / Language / 言語**
 
+**Implementation:** Python 3.10+ · Termux friendly
+
+The Go implementation is available in [RequestGuard_Go](https://github.com/NanahoshiLusuna/RequestGuard_Go).
+
 [🇰🇷 한국어](#한국어) · [🇺🇸 English](#english) · [🇯🇵 日本語](#日本語)
 
 ---
@@ -124,24 +128,6 @@ UPSTREAM_HOST=127.0.0.1
 
 `LISTEN_PORTS`가 비어 있으면 `LISTEN_PORT`를 사용하고 `UPSTREAM_PORT`로 전달합니다.
 
-### 애플리케이션 바인딩
-
-애플리케이션을 루프백에 바인딩할 수 있습니다.
-
-```env
-HOST=127.0.0.1
-PORT=8080
-```
-
-공개 주소:
-
-```env
-PUBLIC_BASE_URL=http://your-public-address:8080
-```
-
-`PUBLIC_BASE_URL`은 브라우저 및 OAuth 콜백에서 사용하는 공개 주소입니다.
-
-애플리케이션의 로컬 수신 주소와 같을 필요는 없습니다.
 
 ## 요청 검사
 
@@ -676,17 +662,6 @@ UPSTREAM_HOST=127.0.0.1
 
 `LISTEN_PORTS` が空の場合、`LISTEN_PORT` を使用して `UPSTREAM_PORT` に転送します。
 
-### アプリケーションのバインド
-
-```env
-HOST=127.0.0.1
-PORT=8080
-PUBLIC_BASE_URL=http://your-public-address:8080
-```
-
-`PUBLIC_BASE_URL` はブラウザおよびOAuthコールバックで使用する公開URLです。
-
-アプリケーションのローカル待受アドレスと同じである必要はありません。
 
 ## リクエスト検査
 
@@ -844,4 +819,4 @@ RequestGuard
 
 ## License
 
-See the repository license file for licensing information.
+No license file is currently included in this repository.
