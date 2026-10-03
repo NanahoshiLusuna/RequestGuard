@@ -33,6 +33,19 @@ RequestGuard는 원치 않는 외부 요청으로부터 로컬 애플리케이�
 * **다중 신호 차단** — 여러 정보를 종합하여 차단 여부 판단
 * **Termux 지원** — Android 및 기타 경량 환경에서 실행 가능
 
+## Python 구현의 장점과 Go 버전
+
+Python 버전은 **소스 코드를 바로 수정하고 실행하기 쉬운 구조**가 장점입니다.
+
+- **Termux에 바로 실행하기 쉬움** — Python 3.10+만 설치하면 소스 그대로 실행할 수 있습니다.
+- **빠른 수정과 테스트** — 프록시 로직이나 정책을 수정한 뒤 별도의 바이너리 빌드 과정 없이 바로 테스트할 수 있습니다.
+- **코드 접근성이 높음** — Python 소스 형태라 동작을 확인하고 기능을 추가하기 편합니다.
+- **기존 Python 환경에 잘 맞음** — 이미 Python을 사용하는 홈 서버, 개발 환경, Termux 환경에 자연스럽게 배치할 수 있습니다.
+
+반대로 배포 대상에 Python 런타임을 준비해야 하므로, **단일 실행 파일로 배포하려면 Go 버전이 더 적합할 수 있습니다.**
+
+→ **Go 버전:** [RequestGuard_Go](https://github.com/NanahoshiLusuna/RequestGuard_Go)
+
 ## 작동 방식
 
 ```text
@@ -302,6 +315,19 @@ It sits in front of your application, analyzes incoming connections using multip
 * **Multi-signal blocking** — combines reputation, country, traffic rate, request format, and block history
 * **Termux friendly** — designed for Android and other lightweight environments
 
+## Why use the Python version?
+
+The Python version is useful when you want a **source-first implementation that is easy to modify and run**.
+
+- **Easy Termux setup** — install Python 3.10+ and run the source directly.
+- **Fast iteration** — policy or proxy changes can be tested without a separate binary build step.
+- **Easy to inspect and extend** — the Python source is straightforward to read and customize.
+- **Good fit for existing Python environments** — convenient for development machines, home servers, and Termux systems that already use Python.
+
+The trade-off is that the target system needs a Python runtime. For **single-binary deployment**, the Go version may fit better.
+
+→ **Go version:** [RequestGuard_Go](https://github.com/NanahoshiLusuna/RequestGuard_Go)
+
 ## How it works
 
 ```text
@@ -566,6 +592,19 @@ RequestGuardは、ローカルアプリケーションやセルフホストサ�
 * **レピュテーションキャッシュ** — 不要なAPIへの繰り返しアクセスを削減
 * **複数シグナルによるブロック** — 複数の情報を組み合わせて判定
 * **Termux対応** — Androidなどの軽量な環境で実行可能
+
+## Python版のメリット
+
+Python版は、**ソースを直接変更して実行しやすいこと**がメリットです。
+
+- **Termuxで導入しやすい** — Python 3.10+ を用意すれば、ソースをそのまま実行できます。
+- **変更とテストが速い** — ポリシーやプロキシ処理を変更しても、別途バイナリをビルドする必要がありません。
+- **コードを確認・拡張しやすい** — Pythonのソースを直接読んで機能を追加できます。
+- **既存のPython環境に合わせやすい** — Pythonをすでに使っている開発環境、ホームサーバー、Termux環境に適しています。
+
+一方、実行先にPythonランタイムが必要です。**単一バイナリで配布したい場合はGo版が向いています。**
+
+→ **Go版:** [RequestGuard_Go](https://github.com/NanahoshiLusuna/RequestGuard_Go)
 
 ## 動作方式
 
